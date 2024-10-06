@@ -1,32 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body, html {
   height: 100%;
   margin: 0;
-  font: 400 15px/1.8 "Lato", sans-serif;
+  font: 400 15px/1.8 "Roboto", sans-serif; /* Changed to Roboto */
   color: #777;
 }
 
-.bgimg-1, .bgimg-2, .bgimg-3 {
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6 {
   position: relative;
-  opacity: 0.65;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
 }
+
+/* Adding unique opacity and min-height for a different design feel */
 .bgimg-1 {
-  background-image: url("img_parallax.jpg");
-  min-height: 100%;
+  background-image: url("denial.jpeg");
+  min-height: 500px;
+  opacity: 0.8;
 }
 
 .bgimg-2 {
-  background-image: url("img_parallax2.jpg");
-  min-height: 400px;
+  background-image: url("anger.jpeg");
+  min-height: 500px;
+  opacity: 0.8;
 }
 
 .bgimg-3 {
-  background-image: url("img_parallax3.jpg");
-  min-height: 400px;
+  background-image: url("bargaining.jpg");
+  min-height: 500px;
+  opacity: 0.8;
+}
+
+.bgimg-4 {
+  background-image: url("depression.jpeg");
+  min-height: 500px;
+  opacity: 0.8;
+}
+
+.bgimg-5 {
+  background-image: url("acceptance.jpg");
+  min-height: 100%;
+  opacity: 0.8;
+}
+
+.bgimg-6 {
+  background-image: url("5stages.jpeg");
+  min-height: 100%;
+  opacity: 0.8;
 }
 
 .caption {
@@ -39,23 +62,32 @@ body, html {
 }
 
 .caption span.border {
-  background-color: #111;
+  background-color: rgba(0, 0, 0, 0.5); 
   color: #fff;
   padding: 18px;
   font-size: 25px;
   letter-spacing: 10px;
+  border-radius: 5px; /* Rounded borders for a softer look */
 }
 
 h3 {
+  letter-spacing: 10px;
+  text-transform: lowercase;
+  font: 40px "Roboto", sans-serif;
+  color: black;
+}
+
+p {
   letter-spacing: 5px;
-  text-transform: uppercase;
-  font: 20px "Lato", sans-serif;
+  text-transform: lowercase;
+  text-align: center;
+  font: 20px "Roboto", sans-serif;
   color: #111;
 }
 
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
-  .bgimg-1, .bgimg-2, .bgimg-3 {
+  .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6 {
     background-attachment: scroll;
   }
 }
